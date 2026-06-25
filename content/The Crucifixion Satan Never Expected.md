@@ -1,4 +1,6 @@
-# The Crucifixion Satan Never Expected
+---
+title: The Crucifixion Satan Never Expected
+---
 
 
 > *None of the rulers of this age understood this, for if they had, they would not have crucified the Lord of glory.* (1 Corinthians 2:8)
