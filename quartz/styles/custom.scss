@@ -1,3 +1,115 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ============================================================
+//  Literary theme — warm, serious, essay-first
+//  Colors & fonts come from quartz.config.yaml; this file
+//  handles reading rhythm, scripture quotes, drop caps, links.
+// ============================================================
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+// Display serif for every heading level
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headerFont);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+
+// Site wordmark (top-left)
+.page-title,
+h1.page-title,
+h2.page-title {
+  font-family: var(--headerFont);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+// ---- The article: comfortable literary measure ----
+.center article,
+.page-content article {
+  font-size: 1.08rem;
+  line-height: 1.8;
+
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    margin-top: 2.6rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.9rem;
+  }
+
+  p {
+    margin: 1.15rem 0;
+  }
+
+  // Drop cap on the opening paragraph of an essay
+  > p:first-of-type::first-letter {
+    font-family: var(--headerFont);
+    font-weight: 700;
+    color: var(--secondary);
+    float: left;
+    font-size: 3.4em;
+    line-height: 0.78;
+    padding: 0.04em 0.12em 0 0;
+  }
+
+  // Scripture / pull quotes
+  blockquote {
+    border-left: 3px solid var(--secondary);
+    background: var(--highlight);
+    margin: 1.7rem 0;
+    padding: 0.75rem 1.4rem;
+    font-style: italic;
+    font-size: 1.13rem;
+    color: var(--dark);
+    border-radius: 0 5px 5px 0;
+  }
+
+  strong {
+    color: var(--dark);
+    font-weight: 700;
+  }
+
+  // Elegant animated underline on real links (leave Quartz's
+  // internal link pills alone)
+  a:not(.internal):not(.tag-link) {
+    text-decoration: none;
+    background-image: linear-gradient(var(--secondary), var(--secondary));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 1px;
+    transition: background-size 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      color: var(--tertiary);
+      background-size: 100% 2px;
+    }
+  }
+
+  // Centered hairline for section breaks (`---`)
+  hr {
+    border: none;
+    height: 1px;
+    background: var(--lightgray);
+    width: 55%;
+    margin: 2.6rem auto;
+  }
+}
+
+::selection {
+  background: var(--highlight);
+}
