@@ -6,5 +6,5 @@ Essays reading the Gospels the way René Girard read them: as forensics, not ser
 
 Start here:
 
-- [[The Commandment You Cannot Obey]] — the tenth commandment discovers mimetic desire, hits the wall no law can climb, and needs a Person to finish the sentence.
-- [[The Crucifixion Satan Never Expected]] — the cross as a victim mechanism like all the others, with one detail that breaks it.
+- [[The Commandment You Cannot Obey]], the tenth commandment discovers mimetic desire, hits the wall no law can climb, and needs a Person to finish the sentence.
+- [[The Crucifixion Satan Never Expected]], the cross as a victim mechanism like all the others, with one detail that breaks it.
