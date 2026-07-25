@@ -225,8 +225,8 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        RSS: https://djouadiabdel.github.io/quartz/index.xml
+        GitHub: https://github.com/djouadiabdel
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
@@ -258,11 +258,16 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+  # Off on purpose. This plugin ships an Obsidian theme in CSS layers that
+  # outrank the config above, so it was silently replacing the Playfair /
+  # EB Garamond typography with Schibsted Grotesk and Source Sans Pro,
+  # neither of which the site loads. Turn it back on only if you also want
+  # its fonts.
   - source:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw

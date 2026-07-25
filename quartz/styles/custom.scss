@@ -3,22 +3,39 @@
 // ============================================================
 //  Literary theme — warm, serious, essay-first
 //  Colors & fonts come from quartz.config.yaml; this file
-//  handles reading rhythm, scripture quotes, drop caps, links.
+//  handles reading rhythm, scripture quotes, drop caps, links,
+//  the landing page, and the surrounding chrome.
 // ============================================================
+
+// Quartz wraps rendered markdown in .markdown-rendered inside the
+// <article>. Anything using a direct-child selector has to go
+// through it, so match both shapes.
+$doc: ".center article > .markdown-rendered, .center article";
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures contextual;
 }
 
 // Display serif for every heading level
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--headerFont);
   font-weight: 600;
   letter-spacing: -0.005em;
   line-height: 1.2;
+  text-wrap: balance;
 }
+
+// ------------------------------------------------------------
+//  Chrome: wordmark, sidebars, panels
+// ------------------------------------------------------------
 
 // Site wordmark (top-left)
 .page-title,
@@ -26,10 +43,123 @@ h1.page-title,
 h2.page-title {
   font-family: var(--headerFont);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  font-size: 1.5rem;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin-bottom: 0.2rem;
+
+  a {
+    background-image: none;
+    color: var(--dark);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+
+  // Hairline under the wordmark, tinted with the accent
+  &::after {
+    content: "";
+    display: block;
+    width: 2.2rem;
+    height: 2px;
+    margin-top: 0.55rem;
+    background: var(--secondary);
+    opacity: 0.75;
+  }
 }
 
-// ---- The article: comfortable literary measure ----
+// Side panel headings (Graph View, Backlinks, Table of Contents)
+.right.sidebar,
+.left.sidebar {
+  h3 {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-family: var(--bodyFont);
+  }
+}
+
+// Softer box for the graph
+.graph .graph-outer {
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--lightgray) 22%, transparent);
+}
+
+.explorer {
+  ul.overflow > li > a,
+  .folder-title {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+}
+
+// Table of contents: quieter, with a rule marking the column
+.toc {
+  #toc-content ul.overflow {
+    border-left: 1px solid var(--lightgray);
+    padding-left: 0.85rem;
+
+    & > li > a {
+      font-size: 0.85rem;
+      line-height: 1.45;
+      color: var(--gray);
+      transition: color 0.15s ease;
+
+      &:hover {
+        color: var(--secondary);
+      }
+      &.in-view {
+        color: var(--darkgray);
+      }
+    }
+  }
+}
+
+// The date + read-time line under a title
+.content-meta {
+  font-family: var(--bodyFont);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-top: 0.5rem;
+}
+
+// The article title itself
+.page-header .article-title {
+  font-size: 2.6rem;
+  line-height: 1.12;
+  margin-bottom: 0;
+  letter-spacing: -0.015em;
+
+  @media all and ($mobile) {
+    font-size: 2rem;
+  }
+}
+
+footer {
+  font-size: 0.85rem;
+  color: var(--gray);
+
+  & > p {
+    margin-bottom: 0.4rem;
+  }
+  ul {
+    gap: 1rem;
+  }
+  a {
+    color: var(--gray);
+  }
+}
+
+// ------------------------------------------------------------
+//  The article: comfortable literary measure
+// ------------------------------------------------------------
+
 .center article,
 .page-content article {
   font-size: 1.08rem;
@@ -42,7 +172,7 @@ h2.page-title {
 
   h2 {
     font-size: 1.7rem;
-    margin-top: 2.6rem;
+    margin-top: 2.8rem;
     padding-bottom: 0.35rem;
     border-bottom: 1px solid var(--lightgray);
   }
@@ -56,27 +186,24 @@ h2.page-title {
     margin: 1.15rem 0;
   }
 
-  // Drop cap on the opening paragraph of an essay
-  > p:first-of-type::first-letter {
-    font-family: var(--headerFont);
-    font-weight: 700;
-    color: var(--secondary);
-    float: left;
-    font-size: 3.4em;
-    line-height: 0.78;
-    padding: 0.04em 0.12em 0 0;
-  }
-
   // Scripture / pull quotes
   blockquote {
     border-left: 3px solid var(--secondary);
     background: var(--highlight);
     margin: 1.7rem 0;
-    padding: 0.75rem 1.4rem;
+    padding: 0.85rem 1.5rem;
     font-style: italic;
     font-size: 1.13rem;
+    line-height: 1.7;
     color: var(--dark);
     border-radius: 0 5px 5px 0;
+
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   strong {
@@ -92,7 +219,9 @@ h2.page-title {
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 100% 1px;
-    transition: background-size 0.2s ease, color 0.2s ease;
+    transition:
+      background-size 0.2s ease,
+      color 0.2s ease;
 
     &:hover {
       color: var(--tertiary);
@@ -100,16 +229,176 @@ h2.page-title {
     }
   }
 
-  // Centered hairline for section breaks (`---`)
+  // Centered hairline for section breaks (`---`), with a small
+  // diamond sitting on it
   hr {
     border: none;
     height: 1px;
     background: var(--lightgray);
     width: 55%;
-    margin: 2.6rem auto;
+    margin: 2.8rem auto;
+    position: relative;
+    overflow: visible;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 5px;
+      height: 5px;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: var(--light);
+      border: 1px solid var(--secondary);
+      opacity: 0.7;
+    }
+  }
+
+  li {
+    margin: 0.45rem 0;
   }
 }
 
+// Drop cap on the opening paragraph of an essay.
+// Skipped on the landing page, which gets a standfirst instead.
+body:not([data-slug="index"]) {
+  #{$doc} {
+    & > p:first-of-type::first-letter {
+      font-family: var(--headerFont);
+      font-weight: 700;
+      color: var(--secondary);
+      float: left;
+      font-size: 3.4em;
+      line-height: 0.78;
+      padding: 0.04em 0.12em 0 0;
+    }
+  }
+}
+
+// ------------------------------------------------------------
+//  The landing page: a table of contents for the whole site
+// ------------------------------------------------------------
+
+body[data-slug="index"] {
+  #{$doc} {
+    // Standfirst: the opening paragraph reads larger and quieter
+    & > p:first-of-type {
+      font-size: 1.24rem;
+      line-height: 1.62;
+      color: var(--gray);
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+      display: block;
+      margin: 0.3rem 0 2.6rem;
+      max-width: 34em;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    // "Start here:", "On the doctrine:" — section labels, not prose
+    & > p {
+      font-family: var(--bodyFont);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin: 2.3rem 0 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+
+      // A rule running out from the label to the right margin
+      &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--lightgray);
+      }
+    }
+
+    // The lists become entries, not bullets
+    & > ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      & > li {
+        margin: 0;
+        padding: 1rem 0 1rem 1rem;
+        border-left: 2px solid transparent;
+        border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 55%, transparent);
+        font-size: 1rem;
+        line-height: 1.65;
+        color: var(--darkgray);
+        transition:
+          border-color 0.18s ease,
+          padding-left 0.18s ease,
+          background-color 0.18s ease;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        // The title of the piece. Kept inline on purpose: the comma
+        // after it is his prose, not a separator, so the entry has to
+        // read as one sentence.
+        & > a.internal {
+          font-family: var(--headerFont);
+          font-size: 1.14rem;
+          font-weight: 600;
+          letter-spacing: -0.01em;
+          color: var(--dark);
+          background-color: transparent;
+          padding: 0;
+          transition: color 0.18s ease;
+        }
+
+        &:hover {
+          border-left-color: var(--secondary);
+          padding-left: 1.35rem;
+          background-color: color-mix(in srgb, var(--highlight) 60%, transparent);
+
+          & > a.internal {
+            color: var(--secondary);
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------
+//  Details
+// ------------------------------------------------------------
+
 ::selection {
   background: var(--highlight);
+}
+
+// Internal link pills: keep them light, let the text carry it
+.center article a.internal {
+  background-color: color-mix(in srgb, var(--highlight) 70%, transparent);
+  border-radius: 3px;
+}
+
+// Popovers inherit the reading measure
+.popover .popover-inner {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@media all and ($mobile) {
+  .center article {
+    font-size: 1.02rem;
+    line-height: 1.72;
+  }
+
+  body[data-slug="index"] .center article > p:first-of-type {
+    font-size: 1.12rem;
+  }
 }
