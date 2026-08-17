@@ -2,6 +2,8 @@
 title: Four Broken Nulls, One Mistake
 ---
 
+*Part 6 of eleven. The series is [[Something That Can Say No]].*
+
 I measured something and got 6.10.
 
 Is that big?

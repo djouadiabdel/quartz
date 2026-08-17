@@ -2,6 +2,8 @@
 title: The Rule Girard Actually Wrote
 ---
 
+*Part 3 of eleven. The series is [[Something That Can Say No]].*
+
 Every page number in this project came out of the project's own files, and not one of them had ever been checked against a copy of the book.
 
 I want to be exact about what that means. The lexicons were built from quotations. The quotations came from notes. The notes came from reading, months earlier, of books I did not have open. Eight rounds of measurement, four significant figures deep, resting on a chain nobody had walked back.

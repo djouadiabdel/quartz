@@ -2,6 +2,8 @@
 title: Turning Four Sentences Into Code
 ---
 
+*Part 4 of eleven. The series is [[Something That Can Say No]].*
+
 Girard names four marks the persecution mechanism leaves in a text. To measure them you need word lists, a way to count, and a way to turn four numbers into one.
 
 Every one of those three steps is a decision about the theory disguised as a technical detail. This post is the three decisions.

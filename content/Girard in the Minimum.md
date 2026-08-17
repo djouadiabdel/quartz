@@ -2,6 +2,8 @@
 title: Girard in the Minimum
 ---
 
+*Part 2 of eleven. The series is [[Something That Can Say No]].*
+
 This is the shortest honest version of the theory that still lets you follow what the instrument does. It is not a summary of Girard. It is the load-bearing quarter of him.
 
 Four claims, stacked. Each one rests on the one under it.

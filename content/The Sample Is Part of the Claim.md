@@ -2,6 +2,8 @@
 title: The Sample Is Part of the Claim
 ---
 
+*Part 5 of eleven. The series is [[Something That Can Say No]].*
+
 A good instrument pointed at the wrong texts produces excellent numbers about nothing. Almost nobody checks which texts.
 
 Three things get confused, and the confusion is invisible from inside a spreadsheet.

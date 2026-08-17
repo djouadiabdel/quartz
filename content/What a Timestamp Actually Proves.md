@@ -2,6 +2,8 @@
 title: What a Timestamp Actually Proves
 ---
 
+*Part 8 of eleven. The series is [[Something That Can Say No]].*
+
 The whole defence of this project is one sentence. Predictions were committed to git before the scoring existed, so anybody who does not trust me can check the order for themselves.
 
 Good. Check it.

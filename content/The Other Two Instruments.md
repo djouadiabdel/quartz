@@ -2,6 +2,8 @@
 title: The Other Two Instruments, and What It All Cost
 ---
 
+*Part 11 of eleven. The series is [[Something That Can Say No]].*
+
 Two other studies ran alongside the scapegoat detector. Different subjects, same posture, and one of them is better designed than anything in the main track.
 
 ## Counting the contradictions

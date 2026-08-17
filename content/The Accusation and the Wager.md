@@ -2,6 +2,8 @@
 title: The Accusation, and the Wager
 ---
 
+*Part 1 of eleven. The series is [[Something That Can Say No]].*
+
 The standard objection to René Girard is that his theory cannot lose.
 
 Put it at full strength. The weak version is easy to knock down and I am not interested in that.

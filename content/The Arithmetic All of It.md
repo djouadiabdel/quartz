@@ -2,6 +2,8 @@
 title: The Arithmetic, All of It
 ---
 
+*Part 7 of eleven. The series is [[Something That Can Say No]].*
+
 Everything statistical in this project fits in one post. There are six ideas and none of them is hard.
 
 That is worth saying plainly, because the failures ahead are not failures of sophistication. Nobody needed a better technique. Every one of them is a misuse of something on this list, made by somebody who could have explained the thing correctly if asked.

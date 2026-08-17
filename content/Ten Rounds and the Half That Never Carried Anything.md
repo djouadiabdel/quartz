@@ -2,6 +2,8 @@
 title: Ten Rounds, and the Half That Never Carried Anything
 ---
 
+*Part 9 of eleven. The series is [[Something That Can Say No]].*
+
 Ten pre-registered rounds between 21 July and 16 August. Here is all of it on one page.
 
 | round | what it tested | outcome |

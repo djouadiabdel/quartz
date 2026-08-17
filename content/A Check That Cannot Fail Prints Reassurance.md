@@ -2,6 +2,8 @@
 title: A Check That Cannot Fail Prints Reassurance
 ---
 
+*Part 10 of eleven. The series is [[Something That Can Say No]].*
+
 This is the sentence the whole project turns on, and it has to fire on the project itself or it is a slogan.
 
 > **A check that cannot fail prints reassurance.**
