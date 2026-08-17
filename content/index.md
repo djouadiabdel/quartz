@@ -27,9 +27,21 @@ On the doctrine:
 - [[The Night We Argued the Trinity]], most of a night against a friend's best objections, including the ones I could not put down.
 - [[Filioque|Filioque, One Word and Two Verbs]], two churches split over a translation, and the fight turns out to sit in a gap between two Greek verbs and nowhere else.
 
-On method:
+On method, eleven posts on building something that can tell you no:
 
-- [[The Accusation and the Wager|The Accusation, and the Wager]], the first of eleven. Girard is accused of having a theory that cannot lose, so I turned four of his sentences into code, committed the predictions before the scorer existed, and published the twenty-two failures.
+Girard is accused of having a theory that cannot lose. So I turned four of his sentences into code, committed every prediction to git before the scorer existed, and published the twenty-two failures. The four in bold are where the findings are.
+
+- [[The Accusation and the Wager|The Accusation, and the Wager]], the objection, the wager, and the tally the whole series has to live with.
+- [[Girard in the Minimum]], the load-bearing quarter of the theory and nothing else.
+- **[[The Rule Girard Actually Wrote]]**, his own decision rule, on a page nobody in the project had opened, and it asks for less than we were testing.
+- [[Turning Four Sentences Into Code]], word lists, the 960 deletions, and the choice between adding up and taking the smallest.
+- [[The Sample Is Part of the Claim]], a play with its sacrifice missing, a page left on disk on purpose, and a corpus nobody ever counted.
+- **[[Four Broken Nulls One Mistake]]**, four control tests built wrong in four rounds, and the ten-second check that would have caught all of them.
+- [[The Arithmetic All of It]], every statistic in the project, from a rate to a power calculation, with no formula arriving before the picture.
+- [[What a Timestamp Actually Proves]], the commit gaps are six minutes, so the clock proves almost nothing and the file manifest proves a great deal.
+- **[[Ten Rounds and the Half That Never Carried Anything]]**, why the half of the instrument that states Girard's claim has never carried a result, and the bucket that contradicts its own docstring.
+- **[[A Check That Cannot Fail Prints Reassurance]]**, four checks that could not fail, three of them mine, and the one habit that caught them.
+- [[The Other Two Instruments]], the contradiction count, the resurrection control, and what the whole thing cost.
 
 On the evidence:
 
