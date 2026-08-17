@@ -27,6 +27,10 @@ On the doctrine:
 - [[The Night We Argued the Trinity]], most of a night against a friend's best objections, including the ones I could not put down.
 - [[Filioque|Filioque, One Word and Two Verbs]], two churches split over a translation, and the fight turns out to sit in a gap between two Greek verbs and nowhere else.
 
+On method:
+
+- [[The Accusation and the Wager|The Accusation, and the Wager]], the first of eleven. Girard is accused of having a theory that cannot lose, so I turned four of his sentences into code, committed the predictions before the scorer existed, and published the twenty-two failures.
+
 On the evidence:
 
 - [[The Checkable Parts]], what archaeology can and cannot buy you, with the overclaims cut out.
