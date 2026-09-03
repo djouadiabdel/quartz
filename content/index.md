@@ -38,3 +38,7 @@ On the evidence:
 - [[The Verdict He Kept]], Bart Ehrman named the verse his deconversion started with, and it is worth taking seriously.
 - [[The Mustard Seed Dilemma]], the smallest objection on the internet, answered by reading the sentence it comes from.
 - [[The Defense Is the Evidence]], what it means when a reading has to be bent to protect the doctrine that needs it.
+
+---
+
+*[[privacy|Privacy Policy]] and [[terms|Terms of Service]] for Reel Uploader, the personal tool used to manage this author's YouTube uploads.*
